@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Contact</title>
+    <title>Digital Business Card</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,27 +20,68 @@
             font-family: Arial, sans-serif;
         }
 
-        a {
-            background: #ffffff;
-            color: #111;
-            text-decoration: none;
-            padding: 18px 32px;
-            border-radius: 12px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: 0.2s;
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: min(90vw, 350px);
         }
 
-        a:hover {
-            transform: scale(1.05);
+        .btn {
+            display: block;
+            text-align: center;
+            background: #fff;
+            color: #111;
+            text-decoration: none;
+            padding: 18px 28px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform .2s ease, box-shadow .2s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px) scale(1.03);
+        }
+
+        .contact {
+            background: #ffffff;
+            color: #111;
+        }
+
+        .apple {
+            background: #000;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .google {
+            background: #4285F4;
+            color: #fff;
         }
     </style>
 </head>
 <body>
 
-    <a href="santiago-gutierrez.vcf">
-        📇 Save Contact
-    </a>
+    <div class="container">
+
+        <a class="btn contact" href="santiago-gutierrez.vcf">
+            📇 Save Contact
+        </a>
+
+        <a class="btn apple" href="santiagogutierrez.pkpass">
+             Add to Apple Wallet
+        </a>
+
+        <a class="btn google"
+           href="https://pay.google.com/gp/v/save/eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJwYXNzMnVAcGFzc2VzLTE4MDUwOS5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsImF1ZCI6Imdvb2dsZSIsInR5cCI6InNhdmV0b2FuZHJvaWRwYXkiLCJpYXQiOjE3ODUwMzQ4OTUsInBheWxvYWQiOnsiZ2VuZXJpY09iamVjdHMiOlt7ImlkIjoiMzIxMzU3MjAxNDAwNjExNTU3My4zOTEyOTgudnhDb0c0eUdUem5nIn1dfX0.ZWAjDbuPdpu-mK2ZwEQGlCC1JwXoqIurNyoUGzzbDVfdM1f_9oyV57vLt6wRZOv9Lb6NGE73Vh0UwinxujJ9cT9lN7-8jHTwhbdOs1SnS7FulkjdXUxzeyGduIiTA1f5xAu6KMBe4R9yMd8BPe1cIBlIResuEDs3ajHYgO9-QQ7WoUVsALundMha9JxM52yFbyF_Bh-lHFojml2SDynmR2GRq1K9vRUMTksIUyc2koIA4lo5-pM3cclOWl0LTXsFceRqX_Gx4aMPhJsh7pjwnB363YsfTGUxtVUMLmVhHhmIN-JcORg1Pgfb6lAY4_dG_-VB1EKmnybvSpWG3PODAQ"
+           target="_blank"
+           rel="noopener">
+            G Add to Google Wallet
+        </a>
+
+    </div>
 
 </body>
 </html>
